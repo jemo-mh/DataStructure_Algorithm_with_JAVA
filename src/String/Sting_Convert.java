@@ -20,7 +20,7 @@ public class Sting_Convert {
 		int no; //변환하는정수
 		int cd; //기수
 		int dno; //변환후 자리수
-		int retry; //retry
+		int retry; //다시시작
 		char[] cno = new char[32]; //변환후의 각 자리 숫자를 넣어두는 문자의 배열
 		
 		System.out.println("십진수를 기수로  변환");
@@ -28,14 +28,12 @@ public class Sting_Convert {
 		do {
 			do {
 				System.out.print("변환하는 음이 아닌 정수 : ");
-				no= scanner.nextInt();
-				
+				no= scanner.nextInt();				
 			}while(no<0);
 			
 			do {
 				System.out.print("변환하고자 하는 진수 수 (2~36)");
-				cd = scanner.nextInt();
-				
+				cd = scanner.nextInt();		
 			}while(cd<2||cd>36);
 			dno= cardConvR(no,cd,cno);
 			System.out.println(cd+"진수로는 : ");
